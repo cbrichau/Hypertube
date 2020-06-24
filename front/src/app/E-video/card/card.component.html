@@ -1,0 +1,88 @@
+<div class="spinner" *ngIf="isLoading"></div>
+<div class="container-fluid" *ngIf="!isLoading">
+
+  <!-- VIDEO INFO -->
+  <div class="row justify-content-center mt-2">
+    <div class="col-md-3 text-center mb-2">
+      <img src="{{ videoInfos['Poster'] }}" class="img-fluid">
+    </div>
+
+    <div class="col-md-8">
+      <h1>{{ videoInfos['Title'] }}</h1>
+      <p>
+        <span class="star-rating">
+          <span class="back-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <span class="front-stars" [style.width]="videoInfos['imdbRating']*10+'%'">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </span>
+          </span>
+          <span class="details">
+            {{ videoInfos['rating_average'] }} {{ videoInfos['ratings_count'] }} | {{ videoInfos['Year'] }} | {{ videoInfos['Runtime'] }} | {{ videoInfos['Genre'] }}
+          </span>
+        </span>
+      </p>
+      <p>{{ videoInfos['Plot'] }}</p>
+      <p class="small">{{ videoInfos['Cast'] }}</p>
+      <p class="small">{{ videoInfos['Crew'] }}</p>
+    </div>
+  </div>
+
+  <!-- VIDEO TORRENTS -->
+  <div class="table-responsive mt-2">
+    <table class="table table-striped table-dark" id="accordion">
+      <thead>
+        <tr>
+          <th>
+              <div *ngIf="this.isSeen" class="seenLogo">
+                <img src="../../../assets/img/sid-view.svg" alt="seenMovie" width="60" height="30">
+              </div>
+          </th>
+          <th class="d-none d-sm-table-cell">{{ txt['Upload year'][lg] }}</th>
+          <th class="d-none d-sm-table-cell">{{ txt['Size'][lg] }}</th>
+          <th class="d-none d-sm-table-cell">{{ txt['Seeds'][lg] }}</th>
+          <th class="d-none d-sm-table-cell">{{ txt['Peers'][lg] }}</th>
+          <th> </th>
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let torrent of videoInfos['Torrents']; let i = index;">
+        <tr class="bg-dark">
+          <td>{{ torrent.title }}</td>
+          <td class="d-none d-sm-table-cell">{{ torrent.year_uploaded }}</td>
+          <td class="d-none d-sm-table-cell">{{ torrent.size }}</td>
+          <td class="d-none d-sm-table-cell">{{ torrent.seeds }}</td>
+          <td class="d-none d-sm-table-cell">{{ torrent.peers }}</td>
+          <td class="min">
+            <button type="button" class="btn btn-success" data-toggle="collapse" [attr.data-target]="'#collapse_' + i " (click)="streamVideo(i)">
+              {{ txt['Play'][lg] }}
+            </button>
+          </td>
+        </tr>
+        <tr class="collapse" id="collapse_{{ i }}" data-parent="#accordion">
+            <td colspan="6" *ngIf="stream">
+              <video controls #videoPlayer crossorigin="use-credentials">
+                <source src="{{ stream }}" type="video/mp4">
+                <source src="{{ stream }}" type="video/ogg">
+                <source src="{{ stream }}" type="video/webm">
+                <track label="English" kind="subtitles" type="text/vtt" src="{{ subEnPath }}" srclang="en"/>
+                <track label="French" kind="subtitles" type="text/vtt" src="{{ subFrPath }}" srclang="fr"/>
+
+                Your browser doesn't support HTML videos
+              </video>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <hr style="border-color: #6c747d;">
+  <!-- VIDEO COMMENTS -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <app-comments></app-comments>
+    </div>
+  </div>
+
+</div>

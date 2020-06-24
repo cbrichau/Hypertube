@@ -1,0 +1,57 @@
+// VIDEO INFO
+.star-rating
+{
+    display: flex;
+}
+.back-stars
+{
+    display: flex;
+    position: relative;
+    color: LightGray;
+}
+.front-stars
+{
+    display: flex;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    color: gold;
+}
+.details
+{
+  padding-left: 0.5em;
+  font-size: 0.9em;
+}
+
+// VIDEO PLAYER
+
+video:focus {
+  outline: none;
+}
+
+// VIDEO TORRENTS
+
+td
+{
+  width: auto;
+  overflow-wrap: break-word;word-break: break-word;
+}
+
+.seenLogo img
+{
+  display: block;
+  margin-left: 10px;
+}
+
+td.min
+{
+  width: 1%;
+  white-space: nowrap;
+}
+
+// VIDEO PLAYER
+video
+{
+  width: 100%    !important;
+  height: auto   !important;
+}

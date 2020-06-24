@@ -1,0 +1,172 @@
+.container-fluid {
+  width: 95%;
+  margin: auto;
+}
+
+/* ---------------------------------------------------- *\
+    SEARCH FORM
+\* ---------------------------------------------------- */
+
+/* -------- Common elements -------- */
+
+form input, form select {
+  border: 0.5px solid dimgray;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  color: white;
+}
+
+/* -------- Search bar -------- */
+
+.search {
+  position: relative;
+}
+
+.search input[type="text"] {
+  padding: 1.8rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.search .btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 1.8rem;
+  border-radius: 3rem;
+}
+
+/* -------- Dropdown selects -------- */
+
+.dropdw {
+  position: relative;
+}
+
+.dropdw label {
+  margin: 12px 0 2px 5px;
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.dropdw .fas {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1.8rem;
+}
+
+.dropdw select {
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------- *\
+    SEARCH RESULTS
+\* ---------------------------------------------------- */
+
+/* -------- Video thumbnails -------- */
+
+.card {
+  min-width: 230px;
+  height: 100%;
+  border: 1px solid dimgray;
+}
+
+.container-poster {
+  height: 68%;
+  position: relative;
+  z-index: 2;
+}
+
+.card-img-top {
+  height: 100%;
+  opacity: 1;
+  transition: .3s ease;
+  // z-index: 2;
+}
+
+.middle {
+  width: 70px;
+  height: 70px;
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: calc(50% - 35px);    // half of image height
+  left: calc(50% - 35px);   // half of image width
+}
+
+.card:hover .container-poster:hover .card-img-top {
+  opacity: 0.4;
+}
+
+.card:hover .container-poster:hover .middle {
+  opacity: 0.7;
+}
+
+.card:hover .container-poster:hover .middle:hover {
+  opacity: 1;
+}
+
+.outer-play {
+  width: 100%;
+  height: 100%;
+  background-color: #EBBA16;
+  border-radius: 50%;
+}
+
+.inner-play {
+  width: 35px;
+  height: 40px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 20px 0 20px 35px;
+  border-color: transparent transparent transparent #343a40;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 12px);
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.stretched-link {
+  color: #f5dd01;
+}
+
+.stretched-link:link {
+  text-decoration: none;
+}
+
+.stretched-link:visited {
+  text-decoration: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 32%;
+}
+
+.card-body p:last-of-type {
+  margin: 0;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-stars {
+  display: flex;
+  position: relative;
+  color: LightGray;
+  margin: auto;
+}
+
+.front-stars {
+  display: flex;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  color: gold;
+}

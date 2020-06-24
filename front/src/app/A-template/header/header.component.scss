@@ -1,0 +1,86 @@
+/* ------------------------------------------ *\
+    Navigation bar
+\* ------------------------------------------ */
+
+.navbar {
+  width: 100%;
+  margin-bottom: 2vh;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(20,20,20,0.9);
+  padding: 5px 5%;
+}
+
+.navbar-expand {
+  justify-content: space-between;
+}
+
+/* ------------------------------------------ *\
+    Brand section
+\* ------------------------------------------ */
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------ *\
+    Links section
+\* ------------------------------------------ */
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+/* ------ User dropdown ------ */
+
+#navbar-dropdown {
+  font-size: 100px;
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0;
+  background-color: rgba(37,37,38,0.8);
+}
+
+.dropdown-item {
+  color: rgb(173,173,173);
+}
+
+.dropdown-item i {
+  vertical-align: bottom;
+}
+
+.dropdown-item:hover {
+  background-color: initial;
+  color: whitesmoke;
+}
+
+.dropdown-divider {
+  border-top-color: rgb(59, 59, 59);
+}
+/* ------ Language buttons ------ */
+
+.languages-div {
+  margin-left: 1vh;
+}
+
+.languages-div button:nth-of-type(2) {
+  margin-left: 0.5vh;
+}
+
+
+@media (max-width: 400px) {
+  .navbar {
+    width: 95%;
+  }
+
+  .languages-div {
+    margin-left: 0.5vh;
+  }
+
+  .languages-div button:nth-of-type(2) {
+  margin-left: 0;
+  }
+}
