@@ -52,9 +52,9 @@ function authSuccess(authProvider, profile, done)
       'familyName': profile.displayName.split(' ').slice(-1).join(' ')
     }
   }
-  if (profile.name.givenName == '')
+  if (profile.name.givenName == '' || profile.name.givenName == undefined)
     profile.name.givenName = userName;
-  if (profile.name.familyName == '')
+  if (profile.name.familyName == '' || profile.name.familyName == undefined)
     profile.name.familyName = userName;
   if (authProvider == 'google')
     avatar = 'http://localhost:3000/assets/pictures/__default-profile-pic.png';
