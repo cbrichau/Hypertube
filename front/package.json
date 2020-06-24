@@ -30,6 +30,7 @@
     "ngx-infinite-scroll": "^9.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "^6.5.5",
+    "sockjs": "^0.3.20",
     "zone.js": "^0.10.3"
   },
   "devDependencies": {
