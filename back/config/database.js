@@ -14,5 +14,3 @@ if (conn) {
 } else {
   console.log('Connexion à MongoDB échouée !');
 }
-  // .then(() => console.log('Connexion à MongoDB réussie !'))
-  // .catch(() => console.log('Connexion à MongoDB échouée !'));
