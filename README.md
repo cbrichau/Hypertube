@@ -1,14 +1,12 @@
-# Hypertube (19 Coding School project, june 2020, 110% grade)
-
 ## Description
 
 Hypertube is a torrent-based Netflix-like website.
 
 It allows logged users to search for and watch films in streaming. The search box is directly connected to torrent websites (using their APIs) and, as soon as a user clicks "Play" on a film, the file is downloaded on the server and streamed on the web player at the same time.
 
-This was a 19 Coding School web project. It was coded using MEAN stack (MongoDB, Express.js, Angular, Node.js) by Clio Brichaut (@cbrichau), Adam Ceciora (@adamceci) and Yassine Chahbar (@ychahbar19).
+This was a 19 Coding School web project. It was coded using MEAN stack (MongoDB, Express.js, Angular, Node.js) for 6 weeks in 2020 by Clio Brichaut (@cbrichau), Adam Ceciora (@adamceci) and Yassine Chahbar (@ychahbar19).
 
-Final grade: 110%
+Final grade: 110% (points for implementing bonuses).
 
 Peer evaluations:
 1) 115% "Bon Netflix les gars ! Rien à dire, très bon projet ! A la revoyure !"
@@ -19,6 +17,8 @@ Peer evaluations:
 
 ## Installation
 
+```
 git clone
 cd back > npm install > nodemon > open http://localhost:3000/
 cd front > npm install > ng serve > open http://localhost:4200/
+```
