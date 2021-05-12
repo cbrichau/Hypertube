@@ -1,7 +1,24 @@
-Install:
+# Hypertube (19 Coding School project, june 2020, 110% grade)
 
-1) git clone
-2) cd back > npm install > nodemon (> open http://localhost:3000/)
-3) cd front > npm install > ng serve > open http://localhost:4200/
+## Description
 
-Avancement https://docs.google.com/document/d/1fOeTbhUiRntl5Tw_8WZA7uUWSPwDD18ZbRKFtYyOeCw/edit?usp=sharing
+Hypertube is a torrent-based Netflix-like website.
+
+It allows logged users to search for and watch films in streaming. The search box is directly connected to torrent websites (using their APIs) and, as soon as a user clicks "Play" on a film, the file is downloaded on the server and streamed on the web player at the same time.
+
+This was a 19 Coding School web project. It was coded using MEAN stack (MongoDB, Express.js, Angular, Node.js) by Clio Brichaut (@cbrichau), Adam Ceciora (@adamceci) and Yassine Chahbar (@ychahbar19).
+
+Final grade: 110%
+
+Peer evaluations:
+1) 115% "Bon Netflix les gars ! Rien à dire, très bon projet ! A la revoyure !"
+2) 109% "Super top ! Très grosse motive de votre part de le faire en Angular ce qui vous a fait gagner un point bonus. Site intuitif simple d'utilisation , mieux que la plupart des sites streaming sur le marché !"
+3) 109% "Bravo la team, projet très propre et fonctionnel. L' UX/UI est sympa. On sent la maîtrise dans les technos choisies et une team très soudée malgré les difficultés rencontrées et ça, c'est beau ;). Bonne chance pour la suite"
+4) 112% "Vraiment bon boulot! En plus bravo pour le choix Angular!"
+5) 109% "Très bon boulot, très beau site."
+
+## Installation
+
+git clone
+cd back > npm install > nodemon > open http://localhost:3000/
+cd front > npm install > ng serve > open http://localhost:4200/
