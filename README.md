@@ -2,7 +2,7 @@
 
 Hypertube is a torrent-based Netflix-like website.
 
-It allows logged users to search for and watch films in streaming. The search box is directly connected to torrent websites (using their APIs) and, as soon as a user clicks "Play" on a film, the file is downloaded on the server and streamed on the web player at the same time.
+It allows logged users to search for and watch films in streaming. The search box is directly connected to torrent websites (using their APIs) and, as soon as a user clicks "Play" on a film, the file is downloaded on the server and streamed on the web player at the same time. See [hypertube.fr.pdf](../blob/master/hypertube.fr.pdf) for details.
 
 This was a 19 Coding School web project. It was coded using MEAN stack (MongoDB, Express.js, Angular, Node.js) for 6 weeks in 2020 by Clio Brichaut (@cbrichau), Adam Ceciora (@adamceci) and Yassine Chahbar (@ychahbar19).
 
