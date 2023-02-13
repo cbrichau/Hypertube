@@ -1,10 +1,10 @@
-# Table of contents
+## Table of contents
 
 * [Description](#description)
-* [Installation](#installation)
 * [Screenshots](#screenshots)
+* [Installation](#installation)
 
-# Description
+## Description
 
 **Hypertube is a torrent-based Netflix-like website.**
 
@@ -25,9 +25,23 @@ Peer evaluations:
 
 > 109% _"Très bon boulot, très beau site."_
 
-# Installation
+## Screenshots
 
-> Working as of Feb 2023.
+### Home
+
+![home](https://github.com/cbrichau/Hypertube/blob/master/screenshots/1-home.png)
+
+### Search results
+
+![search](https://github.com/cbrichau/Hypertube/blob/master/screenshots/5-search-results.png)
+
+### Film details & streaming
+
+![film](https://github.com/cbrichau/Hypertube/blob/master/screenshots/6-film-with-streamer-and-comment.png)
+
+## Installation
+
+> Working as of February 2023.
 
 1. Clone the repo.
 
@@ -48,5 +62,3 @@ Peer evaluations:
    * The frontend should now be running on port 4200.
 
 4. Open http://localhost:4200/ to view the app.
-
-# Screenshots
